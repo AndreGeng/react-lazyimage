@@ -1,0 +1,25 @@
+.lazyimage-holder {
+  position: relative;
+}
+.lazyimage-holder .lazyimage-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter.fade-enter-active {
+  transition: opacity 200ms linear;
+  opacity: 1;
+}
+.fade-leave {
+  opacity: 1;
+}
+.fade-leave.fade-leave-active {
+  transition: opacity 200ms linear;
+  opacity: 0.01;
+}
+
+

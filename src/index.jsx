@@ -52,6 +52,7 @@ class LazyImage extends Component {
   }
   fetch() {
     this.isRequesting = true;
+    window.removeEventListener('scroll', this.onScroll);
     const { targetSrc } = this.props;
     const img = new Image();
     img.src = targetSrc;
@@ -85,16 +86,6 @@ class LazyImage extends Component {
   }
 }
 
-// LazyImage.propTypes = {
-//   targetSrc: PropTypes.string.isRequired,
-//   defaultSrc: PropTypes.string.isRequired,
-//   height: PropTypes.number.isRequired, // image height
-//   offset: PropTypes.number,
-// };
-// LazyImage.defaultProps = {
-//   offset: 100,
-//   className: '',
-// };
 
 export default LazyImage;
 
